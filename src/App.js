@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './BaiTapLayoutComponent/Header';
+import Body from './BaiTapLayoutComponent/Body';
+import Item from './BaiTapLayoutComponent/Item';
+import Footer from './BaiTapLayoutComponent/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <div className="container">
+         <div className="bg-dark text-white">
+        <Header />
+      </div>
+
+      <Body/>
+      <div class="row">
+          <div class="col"><Item/></div>
+          <div class="col"><Item/></div>
+          <div class="col"><Item/></div>
+          <div class="w-100"></div>
+          <div class="col"><Item/></div>
+          <div class="col"><Item/></div>
+          <div class="col"><Item/></div>
+        </div>
+
+      <Footer/>
+         </div>
+
     </div>
   );
 }
